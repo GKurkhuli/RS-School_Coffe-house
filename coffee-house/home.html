@@ -53,6 +53,9 @@
                     </a>
                 </div>
             </div>
+            
+        </header>
+        <main>
             <div class="advertise">
                 <dav class="advertise__info">
                     <p class="advertise__info__text-bold"><span class="advertise__info__text-bold__italic">Enjoy</span> premium coffee at our charming cafe</p>
@@ -60,12 +63,95 @@
                     <a href="menu.html"><div class="button-white"><p>Menu</p></div></a>
                 </dav>
             </div>
-        </header>
-        <main>
-
+            <div class="roulette" id="Favorite_Coffee">
+                <div class="roulette__heading"><p>Choose your <span>favorite</span> coffee</p></div>
+                <div class="roulette__menu">
+                    <button class="button-circle roulette__menu__button-previous" id="button_previous"><ion-icon class="center" name="arrow-back-outline"></ion-icon></button>
+                    <div class="roulette__menu__item">
+                        <div class="roulette__menu__item__content">
+                            <div class="roulette__menu__item__content__image"><img src="src/img/Ice_coffee.png" alt="Ice coffee"></div>
+                            <div class="roulette__menu__item__content__product">
+                                <p class="roulette__menu__item__content__product-header">S’mores Frappuccino</p>
+                                <p class="roulette__menu__item__content__product-description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <p class="roulette__menu__item__content__product-price">$5.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button-circle roulette__menu__button-next" id="button_next"><ion-icon class="center" name="arrow-forward-outline"></ion-icon></button>
+                    <div class="roulette__menu__object">
+                        <div class="roulette__menu__object-choose roulette__menu__object-choose-active"></div>
+                        <div class="roulette__menu__object-choose"></div>  
+                        <div class="roulette__menu__object-choose"></div>           
+                    </div>
+                </div>
+            </div>
+            <div class="about" id="About">
+                <div class="about__description"><p>Resource is <span>the  and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</p></div>
+                <div class="about__images">
+                    <div class="about__images__side">
+                        <div class="about__images__side-square"><img src="src/img/about1.jpeg" alt="Woman with coffee"></div>
+                        <div class="about__images__side-rect"><img src="src/img/about2.jpeg" alt="coffee cup"></div>
+                    </div>
+                    <div class="about__images__side">
+                        <div class="about__images__side-rect"><img src="src/img/about3.jpeg" alt="coffee cup"></div>
+                        <div class="about__images__side-square"><img src="src/img/about4.jpeg" alt="cupple drinking coffee"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="apps" id="Apps">
+                <div class="apps__side">
+                    <div class="apps__side__description">
+                        <p class="apps__side__description-header"><span>Download</span> our apps to start ordering</p>
+                        <p class="apps__side__description-text">Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
+                        <div class="apps__side__description-download">
+                            <a href="">
+                                <div class="button-download">
+                                    <div class="button-download__logo"><ion-icon name="logo-apple"></ion-icon></div>
+                                    <div class="button-download__text">
+                                        <p class="button-download__text-small">Available on the</p>
+                                        <p class="button-download__text-big">App Store</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="button-download">
+                                    <div class="button-download__logo"><ion-icon name="logo-google-playstore"></ion-icon></div>
+                                    <div class="button-download__text">
+                                        <p class="button-download__text-small">Available on the</p>
+                                        <p class="button-download__text-big">Google Play</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="apps__side"><img src="src/img/Phones.png" alt="phones"></div>
+            </div>
         </main>
         <footer>
-            
+            <div class="contacts" id="Contacts">
+                <div class="contacts__side">
+                    <p class="contacts__side-header">Sip, Savor, Smile. <span>It's Cofee time!</span></p>
+                    <div class="contacts__side-social">
+                        <a href=""><div class="button-circle contacts__side-social__button"><iconify-icon class="center" icon="circum:twitter"></iconify-icon></div></a>
+                        <a href=""><div class="button-circle contacts__side-social__button"><ion-icon class="center" name="logo-instagram"></ion-icon></div></a>
+                        <a href=""><div class="button-circle contacts__side-social__button"><iconify-icon class="center" icon="iconoir:facebook"></iconify-icon></div></a>
+                    </div>
+                </div>
+                <div class="contacts__side">
+                    <div class="contacts__side__info">
+                        <p class="contacts__side__info-header">Contact us</p>
+                        <ul class="contacts__side__info-list">
+                            <li><iconify-icon icon="ep:location"></iconify-icon> <p>8558 Green Rd.,  LA</p></li>
+                            <li><iconify-icon icon="iconoir:phone"></iconify-icon> <p>+1 (603) 555-0123</p></li>
+                            <li><iconify-icon icon="iconamoon:clock-light"></iconify-icon><p>Mon-Sat: 9:00 AM - 23:00 PM</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     </body>
 </html>

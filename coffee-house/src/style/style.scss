@@ -1,9 +1,10 @@
-
 :root{
     --Color_Main: #E1D4C9;
     --Color_Dark: #403F3D;
     --Color_white: #E1D4C9;
     --Color_Brown: #B0907A;
+    --Color_Dark-border:#665F55;
+    --Color_light-border:#C1B6AD;
 }
 @mixin centerVertical {
     position: absolute;
@@ -20,6 +21,18 @@
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+}
+
+@mixin containerHeading{
+    font-size: 3.75rem;
+    color: var(--Color_Dark);
+    line-height: 125%;
+    font-weight: 600;
+    & span{
+        color: var(--Color_Brown);
+        font-style: italic;
+    }
+
 }
 *{
     margin: 0;
@@ -42,18 +55,21 @@ a:visited, a:active, a:link{
     text-decoration: none;
     color: var(--Color_Dark);
 }
-
+ul, li{
+    list-style-type: none;
+}
+button{cursor:pointer;}
+p{cursor:default;}
 header{
     width: 100%;
     height: auto;
-    padding: 20px 0 100px 0;
+    padding: 20px 0;
 }
 .nav-bar{
     display: flex;
     height: 60px;
     width: 100%;
     position: relative;
-    margin-bottom: 20px;
 
     &__logo{
         width: 100px;
@@ -104,6 +120,10 @@ header{
     }
 }
 
+main{width: 100%;}
+
+.clear{clear: both;}
+
 .advertise{
     width: 100%;
     padding: 100px;
@@ -112,7 +132,7 @@ header{
     align-self: stretch;
     background-image: url(../img/Milk-Coffee.jpeg);
     border-radius: 40px;
-    
+    margin-bottom: 100px;
     &__info{
         width: 530px;
         color: var(--Color_white);
@@ -141,6 +161,7 @@ header{
     height: 64px;
     position: relative;
     border-radius: 100px;
+    &:hover{background-color: var(--Color_Brown);}
     & p{
         color: var(--Color_Dark);
         font-size: 1rem;
@@ -149,10 +170,270 @@ header{
     }
 }
 
-main{
-    width: 100%;
+.button-circle{
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 6.25rem;
+    border: 1px solid var(--Color_Dark-border);
+    background: transparent;
+    font-size: 1.5rem;
+    position: relative;
+    &:hover{background:var(--Color_Brown);}
+    & .center{@include center()}
+
 }
 
-footer{
+.button-download{
+    width: 12.5rem;
+    height: 4rem;
+    padding: 12px 20px;
+    border-radius: 6.25rem;
+    border: solid 1px var(--Color_Dark-border);
+    display: flex;
+    &:hover{background-color: var(--Color_Brown);}
 
+    &__logo{
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 2.25rem;
+        margin-right: 0.5rem;
+    }
+
+    &__text{
+        font-weight: 600;
+        &-small{
+            font-size: 10px;
+            line-height: 140%;
+        }
+        &-big{
+            font-size: 1rem;
+            line-height: 150%;
+        }
+    }
+}
+
+.roulette{
+    width: 100%;
+    align-self: stretch;
+    margin-bottom: 100px;
+    &__heading{
+        text-align: center;
+        @include containerHeading();
+    }
+
+    &__menu{
+        position: relative;
+        width: 100%;
+
+        &__button{
+            &-next{
+                @include centerVertical();
+                right: 0;
+            }
+            &-previous{
+                @include centerVertical();
+                left: 0;
+            }
+        }
+
+        &__item{
+            width: calc(100% - 12.5rem);
+            position: relative;
+            margin: 40px auto;
+            &__content{
+                width: 30rem;
+                margin: 0 auto;
+                &__image{
+                    width: 100%;
+                    height: 30rem;
+                    position: relative;
+                    margin-bottom: 20px;
+                    & img{
+                        @include center();
+                        height: 100%;
+                    }
+                }
+
+                &__product{
+                    color: var(--Color_Dark);
+                    text-align: center;
+                    &-header{
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        line-height: 125%;
+                        margin-bottom: 1rem;
+                    }            
+                    &-description{
+                        font-weight: 400;
+                        line-height: 150%;
+                        margin-bottom: 1rem;
+                    }  
+                    &-price{
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        line-height: 125%;
+                    }      
+                }
+            }
+            
+        }
+        &__object{
+            width: 144px;
+            margin: 0 auto;
+            display: flex;
+            &-choose{
+                width: 40px;
+                height: 4px;
+                border-radius: 100px;
+                background-color: var(--Color_light-border);
+                &:not(:last-child){
+                    margin-right: 12px;
+                }
+                &-active{background-color: var(--Color_Dark-border);}
+            }
+        }
+    }    
+}
+
+.about{
+    width: 100%;
+    margin-bottom: 100px;
+    &__description{
+        font-size: 3.75rem;
+        font-weight: 600;
+        color: var(--Color_Dark);
+        line-height: 125%;
+        margin-bottom: 40px;
+        
+        & span{
+            font-style: italic;
+            color: var(--Color_Brown);
+        }
+    }
+    &__images{
+        display: flex;
+        &__side{
+            width: calc((100% - 40px) / 2);
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            &:not(:last-child){margin-right: 40px;}
+            &-rect{
+                width: 100%;
+                height: 430px;
+                border-radius: 20px;
+                overflow: hidden;
+                & img{
+                    transform: translateY(-15%)
+                }
+            }
+
+            &-square{
+                width: 100%;
+                height: 590px;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+
+            & img{
+                width: 100%;                
+            }
+        }
+    }
+}
+.apps{
+    display: flex;
+    margin-bottom: 100px;
+    &__side{
+        width: calc((100% - 100px) / 2);
+        position: relative;
+        &:first-child{margin-right: 100px;}
+        &__description{
+            @include centerVertical();
+            &-header{
+                font-size: 3.75rem;
+                font-weight: 600;
+                line-height: 125%;
+                color: var(--Color_Dark);
+                margin-bottom: 40px;
+                & span{
+                    font-style: italic;
+                    color: var(--Color_Brown);
+                }
+            }
+            &-text{
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 150%;
+                margin-bottom: 40px;
+            }
+            &-download{
+                width: 100%;
+                display: flex;
+                gap: 20px;
+            }
+        }
+        & img{
+            width: 100%;
+        }
+    }
+}
+footer{
+    padding-bottom: 40px;
+}
+
+.contacts{
+    border-radius: 40px;
+    padding: 6.25rem;
+    background-color: var(--Color_Dark-border);
+    display: flex;
+    gap: 100px;
+    &__side{
+        width: calc((100% - 100px) / 2);
+        position: relative;
+        &-header{
+            color: var(--Color_white);
+            line-height: 125%;
+            font-weight: 600;
+            font-size: 3.75rem;
+            margin-bottom: 40px;
+            & span{
+                color: var(--Color_Brown);
+                font-style: italic;
+            }
+        }
+
+        &-social{
+            display: flex;
+            gap: 12px;
+
+            &__button{
+                color: var(--Color_light-border);
+                border: 1px solid var(--Color_light-border);
+                font-size: 24px;
+            }
+        }
+
+        &__info{
+            color: var(--Color_white);
+            @include centerVertical();
+            &-header{
+                font-size: 1.5rem;
+                font-weight: 600;
+                line-height: 125%;
+                margin-bottom: 40px;
+            }
+            &-list{
+                & li{
+                    display: flex;
+                    gap: 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 150%;
+
+                    &:not(:last-child){margin-bottom: 1rem;}
+                }
+            }
+        }
+    }
 }
