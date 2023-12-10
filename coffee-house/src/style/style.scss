@@ -38,11 +38,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 250ms linear;
 }
 
 html{
     font-size: 16px;
     background-color: white;
+    scroll-behavior: smooth;
 }
 body{
     width: 1440px;
@@ -58,8 +60,7 @@ a:visited, a:active, a:link{
 ul, li{
     list-style-type: none;
 }
-button{cursor:pointer;}
-p{cursor:default;}
+a, button{cursor:pointer;}
 header{
     width: 100%;
     height: auto;
@@ -161,7 +162,7 @@ main{width: 100%;}
     height: 64px;
     position: relative;
     border-radius: 100px;
-    &:hover{background-color: var(--Color_Brown);}
+    &:hover{background-color: var(--Color_Brown); }
     & p{
         color: var(--Color_Dark);
         font-size: 1rem;
@@ -178,7 +179,7 @@ main{width: 100%;}
     background: transparent;
     font-size: 1.5rem;
     position: relative;
-    &:hover{background:var(--Color_Brown);}
+    &:hover{background:var(--Color_Brown); }
     & .center{@include center()}
 
 }
@@ -219,6 +220,18 @@ main{width: 100%;}
     &__heading{
         text-align: center;
         @include containerHeading();
+        & h2{
+            font-size: 3.75rem;
+            font-weight: 600;
+            color: var(--Color_Dark);
+            line-height: 125%;
+            margin-bottom: 40px;
+            
+            & span{
+                font-style: italic;
+                color: var(--Color_Brown);
+            }
+        }
     }
 
     &__menu{
@@ -298,7 +311,7 @@ main{width: 100%;}
 .about{
     width: 100%;
     margin-bottom: 100px;
-    &__description{
+    &__description h2{
         font-size: 3.75rem;
         font-weight: 600;
         color: var(--Color_Dark);
@@ -425,14 +438,93 @@ footer{
             }
             &-list{
                 & li{
-                    display: flex;
-                    gap: 0.5rem;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    line-height: 150%;
-
+                    
                     &:not(:last-child){margin-bottom: 1rem;}
+
+                    & a{
+                        display: flex;
+                        gap: 0.5rem;
+                        color: var(--Color_white);
+                        font-size: 1rem;
+                        font-weight: 600;
+                        line-height: 150%;
+                    }
                 }
+            }
+        }
+    }
+}
+
+.menu{
+    width: 100%;
+    &:not(:last-child){margin-bottom: 40px;}
+    &:last-child{margin-bottom: 100px;}
+    &__header{
+        width: 50rem;
+        margin: 0 auto;
+        text-align: center;
+        & h2{
+            color: var(--Color_Dark);
+            font-size: 3.75rem;
+            font-weight: 600;
+            line-height: 125%;
+           // margin-bottom: 40px;
+
+            & span{
+                color: var(--Color_Brown);
+                font-style: italic;
+            }
+        }
+    }
+
+    &__offer{
+        & input{display: none;}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        & label{
+            padding: 8px 16px 8px 8px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            gap: 8px;
+            border-radius: 100px;
+            background-color: var(--Color_Main);
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 150%;
+            color: var(--Color_Dark);
+            border: 1px solid var(--Color_light-border);
+
+            & span{
+                border-radius: 100px;
+                background-color: var(--Color_light-border);
+                padding: 3px 7px;
+                align-items: center;
+            }
+        }
+
+        & input:checked + label{
+            background-color: var(--Color_Dark-border);
+            color: var(--Color_white);
+            border-color: var(--Color_Dark-border);
+            & span{background-color: var(--Color_Main);}
+        }
+    }
+    &__items{
+
+        &__item{
+
+            &-img{
+
+            }
+            &-description{
+
+            }
+            &-price{
+
             }
         }
     }
