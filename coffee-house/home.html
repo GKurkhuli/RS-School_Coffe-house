@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="src/style/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="icon" href="./src/img/Coffe_Cup.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -38,19 +38,20 @@
                     </a>
                 </div>
                 <nav class="nav-bar__navigation">
-                    <a href="#Favorite_Coffee">Favorite coffee</a>
-                    <a href="#About">About</a>
-                    <a href="#Apps">Mobile App</a>
-                    <a href="#Contacts">Contact us</a>
+                    <ul class="nav-bar__navigation-all">
+                        <li><a href="#Favorite_Coffee">Favorite coffee</a></li>
+                        <li><a href="#About">About</a></li>
+                        <li><a href="#Apps">Mobile App</a></li>
+                        <a href="#Contacts">Contact us</a>
+                    </ul>
+                    <a class="nav-bar__navigation-menu" href="menu.html"><p>Menu</p><img src="./src/img/Coffe_Cup.png" alt="">
                 </nav>
                 <div class="nav-bar__menu-button">
-                    <a href="menu.html"><p>Menu</p><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.1666 9.76667V11.6667C14.1666 14.8883 11.555 17.5 8.33329 17.5C5.11163 17.5 2.49996 14.8883 2.49996 11.6667V9.76667C2.49996 9.4353 2.76859 9.16667 3.09996 9.16667H13.5666C13.898 9.16667 14.1666 9.4353 14.1666 9.76667Z" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9.99996 7.50008C9.99996 6.66675 10.5952 5.83341 11.7857 5.83341V5.83341C13.1006 5.83341 14.1666 4.76743 14.1666 3.45246V2.91675" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.66671 7.5V7.08333C6.66671 5.70262 7.786 4.58333 9.16671 4.58333V4.58333C10.0872 4.58333 10.8334 3.83714 10.8334 2.91667V2.5" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.3334 9.16675H15.4167C16.5673 9.16675 17.5 10.0995 17.5 11.2501C17.5 12.4007 16.5673 13.3334 15.4167 13.3334H14.1667" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    </a>
+                    <a class="nav-bar__menu-button__menu" href="menu.html"><p>Menu</p><img src="./src/img/Coffe_Cup.png" alt=""></a>
+                    <button type="button" class="nav-bar__menu-button__button">
+                        <span class="nav-bar__menu-button__button-rect nav-bar__menu-button__button-rect__top"></span>
+                        <span class="nav-bar__menu-button__button-rect nav-bar__menu-button__button-rect__bottom"></span>
+                    </button>
                 </div>
             </div>
             
@@ -60,28 +61,36 @@
                 <div class="advertise__info">
                     <h2 class="advertise__info__text-bold"><span class="advertise__info__text-bold__italic">Enjoy</span> premium coffee at our charming cafe</h2>
                     <p class="advertise__info__text-small">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                    <a href="menu.html" class="button-white"><p>Menu</p></a>
+                    <a href="menu.html" class="button-white"><p>Menu</p><img src="./src/img/Coffe_Cup.png" alt=""></a>
                 </div>
             </div>
             <div class="roulette" id="Favorite_Coffee">
                 <div class="roulette__heading"><h2>Choose your <span>favorite</span> coffee</h2></div>
                 <div class="roulette__menu">
-                    <button class="button-circle roulette__menu__button-previous" id="button_previous"><ion-icon class="center" name="arrow-back-outline"></ion-icon></button>
-                    <div class="roulette__menu__item">
-                        <div class="roulette__menu__item__content">
-                            <div class="roulette__menu__item__content__image"><img src="src/img/Ice_coffee.png" alt="Ice coffee"></div>
-                            <div class="roulette__menu__item__content__product">
-                                <p class="roulette__menu__item__content__product-header">S’mores Frappuccino</p>
-                                <p class="roulette__menu__item__content__product-description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                                <p class="roulette__menu__item__content__product-price">$5.50</p>
+                    <div class="roulette__menu__object">
+                        <button class="button-circle roulette__menu__object-button" id="button_previous"><ion-icon class="center" name="arrow-back-outline"></ion-icon></button>
+                        <div class="roulette__menu__object__item">
+                            <div class="roulette__menu__object__item__content">
+                                <div class="roulette__menu__object__item__content__image"><img src="src/img/Ice_coffee.png" alt="Ice coffee"></div>
+                                <div class="roulette__menu__object__item__content__product">
+                                    <p class="roulette__menu__object__item__content__product-header">S’mores Frappuccino</p>
+                                    <p class="roulette__menu__object__item__content__product-description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                    <p class="roulette__menu__object__item__content__product-price">$5.50</p>
+                                </div>
                             </div>
                         </div>
+                        <button class="button-circle roulette__menu__object-button" id="button_next"><ion-icon class="center" name="arrow-forward-outline"></ion-icon></button>
                     </div>
-                    <button class="button-circle roulette__menu__button-next" id="button_next"><ion-icon class="center" name="arrow-forward-outline"></ion-icon></button>
-                    <div class="roulette__menu__object">
-                        <div class="roulette__menu__object-choose roulette__menu__object-choose-active"></div>
-                        <div class="roulette__menu__object-choose"></div>  
-                        <div class="roulette__menu__object-choose"></div>           
+                    
+                    <div class="roulette__menu__radio">
+                        <input type="radio" name="roulette__menu__radio-type" id = "Beer" value="Beer" checked="checked">
+                        <label for="Beer"></label>
+
+                        <input type="radio" name="roulette__menu__radio-type" id = "Juise" value="Juise">
+                        <label for="Juise"></label>
+
+                        <input type="radio" name="roulette__menu__radio-type" id = "Tea" value="Tea">  
+                        <label for="Tea"></label>         
                     </div>
                 </div>
             </div>
@@ -139,14 +148,13 @@
                     </div>
                 </div>
                 <div class="contacts__side">
-                    <div class="contacts__side__info">
-                        <p class="contacts__side__info-header">Contact us</p>
-                        <ul class="contacts__side__info-list">
-                            <li><a href="https://www.google.com/maps/place/%E1%83%94%E1%83%9B%E1%83%9E%E1%83%90%E1%83%98%E1%83%A0+%E1%83%A1%E1%83%A2%E1%83%94%E1%83%98%E1%83%A2+%E1%83%91%E1%83%98%E1%83%9A%E1%83%93%E1%83%98%E1%83%9C%E1%83%92%E1%83%98/@40.7484405,-73.9882393,17z/data=!3m1!4b1!4m6!3m5!1s0x89c259a9b3117469:0xd134e199a405a163!8m2!3d40.7484405!4d-73.9856644!16zL20vMDJuZF8?entry=ttu" target="_blank"><iconify-icon icon="ep:location"></iconify-icon> <p>8558 Green Rd.,  LA</p></a></li>
-                            <li><a href="tel:+1(603)555-0123"><iconify-icon icon="iconoir:phone"></iconify-icon> <p>+1 (603) 555-0123</p></a></li>
-                            <li><a href=""><iconify-icon icon="iconamoon:clock-light"></iconify-icon><p>Mon-Sat: 9:00 AM - 23:00 PM</p></a></li>
-                        </ul>
-                    </div>
+                    <p class="contacts__side__info-header">Contact us</p>
+                    
+                    <ul class="contacts__side__info-list">
+                        <li><a href="https://www.google.com/maps/place/%E1%83%94%E1%83%9B%E1%83%9E%E1%83%90%E1%83%98%E1%83%A0+%E1%83%A1%E1%83%A2%E1%83%94%E1%83%98%E1%83%A2+%E1%83%91%E1%83%98%E1%83%9A%E1%83%93%E1%83%98%E1%83%9C%E1%83%92%E1%83%98/@40.7484405,-73.9882393,17z/data=!3m1!4b1!4m6!3m5!1s0x89c259a9b3117469:0xd134e199a405a163!8m2!3d40.7484405!4d-73.9856644!16zL20vMDJuZF8?entry=ttu" target="_blank"><iconify-icon icon="ep:location"></iconify-icon> <p>8558 Green Rd.,  LA</p></a></li>
+                        <li><a href="tel:+1(603)555-0123"><iconify-icon icon="iconoir:phone"></iconify-icon> <p>+1 (603) 555-0123</p></a></li>
+                        <li><a href=""><iconify-icon icon="iconamoon:clock-light"></iconify-icon><p>Mon-Sat: 9:00 AM - 23:00 PM</p></a></li>
+                    </ul>
                 </div>
             </div>
         </footer>
