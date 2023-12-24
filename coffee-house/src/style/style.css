@@ -521,6 +521,10 @@ footer {
 
 .menu {
   width: 100%;
+  margin-bottom: 6.25rem;
+}
+.menu > *:not(:last-child) {
+  margin-bottom: 2.5rem;
 }
 .menu__header {
   max-width: 50rem;
@@ -532,7 +536,6 @@ footer {
   font-size: 3.75rem;
   font-weight: 600;
   line-height: 125%;
-  margin-bottom: 40px;
 }
 .menu__header h2 span {
   color: var(--Color_Brown);
@@ -543,7 +546,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 40px;
 }
 .menu__offer input {
   display: none;
@@ -646,9 +648,8 @@ footer {
 }
 .menu__refresh {
   width: 100%;
-  margin-bottom: 6.25rem;
   align-items: center;
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -694,6 +695,9 @@ footer {
   }
   .apps__side {
     width: 100%;
+  }
+  .menu__refresh {
+    display: flex;
   }
   .contacts {
     padding: 6.25rem 3.75rem;
