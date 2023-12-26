@@ -113,17 +113,6 @@ header{
         }
 
         & a {position: relative;} 
-        & a:hover::after{
-            content: '';
-            display: block;
-            width: 100%;
-            height: 2px;
-            background-color: var(--Color_Dark-border);
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            transition: all 250ms ease;           
-        }
     }
     &__menu-button{
         height: 3.75rem;
@@ -153,24 +142,20 @@ header{
             border: 1px solid var(--Color_Dark-border);
             background: transparent;
             position: relative;
-            transition:  background-color 250ms linear;
-            &:hover{
-                background-color: var(--Color_Brown); 
-                transition:  background-color 250ms linear;
-            }
+
             &-rect{
                 background-color: var(--Color_Dark);
-                width: 16px;
+                width: 1rem;
                 border: 1.5px solid var(--Color_Dark);
                 @include centerHorizontal();
                 transition: transform 250ms linear;
 
                 &__top{
-                    top: 18px;
+                    top: 1rem;
                     transform-origin: top left;
                 }
                 &__bottom{
-                    bottom: 18px;
+                    bottom: 1rem;
                     transform-origin: bottom left;
                 }
             }
@@ -196,7 +181,7 @@ main{width: 100%;}
         color: var(--Color_white);
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 2.5rem;
         &__text-bold{
             font-size: 4.5rem;
             font-weight: 600;
@@ -227,10 +212,7 @@ main{width: 100%;}
     align-items: center;
     justify-content: center;
     gap: 8px;
-    &:hover{
-        background-color: var(--Color_Brown); 
-        transition:  background-color 250ms linear;
-    }
+    transition: all 250ms linear;
     & p{
         color: var(--Color_Dark);
         font-size: 16px;
@@ -250,9 +232,8 @@ main{width: 100%;}
     background: transparent;
     font-size: 1.5rem;
     position: relative;
-    &:hover{background:var(--Color_Brown); }
     & .center{@include center()}
-
+    transition: all 250ms linear;
 }
 
 .button-download{
@@ -262,8 +243,7 @@ main{width: 100%;}
     border-radius: 6.25rem;
     border: solid 1px var(--Color_Dark-border);
     display: flex;
-    &:hover{background-color: var(--Color_Brown);}
-
+    transition: all 250ms linear;
     &__logo{
         width: 2.25rem;
         height: 2.25rem;
@@ -321,7 +301,8 @@ main{width: 100%;}
             &__item{
                 flex-grow:1;
                 &__content{
-                    width: 100%;
+                    margin: 0 auto;
+                    max-width: 30rem;
                     display: flex;
                     flex-direction: column;
                     gap:1.25rem; 
@@ -401,12 +382,12 @@ main{width: 100%;}
         align-items: center;
         justify-content: center;
         display: flex;
-        gap: 3.75rem;
+        gap: 2.5rem;
         &__side{
             width: 50%;
             display: flex;
             flex-direction: column;
-            gap: 3.75rem;
+            gap: 2.5rem;
             &-rect{
                 width: 100%;
                 height: 0;
@@ -429,11 +410,6 @@ main{width: 100%;}
                 width: calc(100% + 70px);
                 @include center();
                 transition: all 250ms linear;
-
-                &:hover{
-                    width: 100%;
-                    transition: all 250ms linear;
-                }  
             }
         }
     }
@@ -471,8 +447,17 @@ main{width: 100%;}
                 gap: 1.25rem;
             }
         }
-        & img{
+        &-image{
             width: 100%;
+            max-width: 39.375rem;
+            margin: 0 auto;
+            height: 0;
+            padding-bottom: 100%;
+            position: relative;
+            & img{
+                width: 100%;
+                @include center();
+            }
         }
     }
 }
@@ -601,19 +586,20 @@ footer{
         }
     }
     &__items{
-        margin-bottom: 2.5rem;
+       // margin-bottom: 2.5rem;
        /* display: grid;
         grid-template-columns: repeat(auto-fill, minmax(310px,1fr));
         justify-items:center; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 40px;
+        gap: 2.5rem;
         &__item{
             position: relative;
             border: 1px solid var(--Color_light-border);
             border-radius: 40px;
             width: 310px;
+            height: 31.625rem;
             &-img{
                 width: 100%;
                 height: 0;
@@ -623,17 +609,11 @@ footer{
                 position: relative;
                 margin: 0 auto;
                 & img{
-                    width: 340px;
-                    height: 340px;
+                    width: calc(100% + 30px);
                     object-fit: cover;
                     @include center();
                     transition: all 250ms linear;
                 }
-            }
-            &:hover img{
-                width: 312px;
-                height: 312px;
-                transition: all 250ms linear;
             }
             &-description{
                 padding: 20px;
@@ -693,6 +673,13 @@ footer{
             }
             &__button{
                 display: block;
+            }
+        }
+    }
+    .roulette{
+        &__menu{
+            &__object{
+                &-button{display: none;}
             }
         }
     }
@@ -815,4 +802,64 @@ footer{
             gap: 0.5rem;
         }
     }
+}
+
+@media (hover:hover){
+    .nav-bar{
+        &__navigation{
+            & a:hover::after{
+                content: '';
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: var(--Color_Dark-border);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: all 250ms ease;           
+            }
+        }
+     }
+
+    .button-white{
+        &:hover{
+        background-color: var(--Color_Brown); 
+        transition:  background-color 250ms linear;
+        }
+        }
+    .button-circle{
+        &:hover{
+            background:var(--Color_Brown);
+            transition:  background-color 250ms linear;
+        }
+    }
+    .button-download{
+        &:hover{
+            background:var(--Color_Brown);
+            transition:  background-color 250ms linear;
+        }
+    }
+    .about{
+        &__images{
+            & img{
+                &:hover{
+                    width: 100%;
+                    transition: all 250ms linear;
+                } 
+            }
+        }
+    }
+    .menu{
+        &__items{
+            &__item{
+                &:hover img{
+                    width: 100%;
+                    transition: all 250ms linear;
+                }
+            }
+        }
+    }
+}
+@media (hover:none){
+
 }
