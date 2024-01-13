@@ -167,6 +167,16 @@ main {
   justify-content: center;
   align-items: flex-start;
   align-self: stretch;
+  position: relative;
+  overflow: hidden;
+}
+.advertise__background-video {
+  height: 120%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: 0;
 }
 .advertise__info {
   width: 33.125rem;
@@ -174,6 +184,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  position: relative;
+  z-index: 1;
 }
 .advertise__info__text-bold {
   font-size: 4.5rem;
@@ -192,6 +204,7 @@ main {
 }
 
 .button-white {
+  z-index: 1;
   background-color: var(--Color_white);
   transition: background-color 250ms linear;
   width: 200px;
@@ -826,6 +839,7 @@ footer {
     transform: translateX(-50%);
     left: 50%;
     bottom: -2;
+    transition: all 250ms linear;
   }
   .button-white:hover {
     transition: all 250ms linear;

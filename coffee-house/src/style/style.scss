@@ -188,12 +188,22 @@ main{width: 100%;}
     justify-content: center;
     align-items: flex-start;
     align-self: stretch;
+    position: relative;
+    overflow: hidden;
+
+    &__background-video{
+        height: 120%;
+        @include center();
+        z-index: 0;
+    }
     &__info{
         width: 33.125rem;
         color: var(--Color_white);
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
+        position: relative;
+        z-index: 1;
         &__text-bold{
             font-size: 4.5rem;
             font-weight: 600;
@@ -214,6 +224,7 @@ main{width: 100%;}
 }
 
 .button-white{
+    z-index: 1;
     background-color: var(--Color_white);
     transition:  background-color 250ms linear;
     width: 200px;
@@ -862,6 +873,7 @@ footer{
                 position: absolute;
                 @include centerHorizontal();
                 bottom: -2;
+                transition: all 250ms linear;
             }
         }
      }
