@@ -1,6 +1,7 @@
 [
   {
     "name": "Irish coffee",
+    "image": "src/img/coffee_menu/coffee_1.jpeg",
     "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
     "price": "7.00",
     "category": "coffee",
@@ -36,6 +37,7 @@
 
   {
     "name": "Kahlua coffee",
+    "image": "src/img/coffee_menu/coffee_2.jpeg",
     "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
     "price": "7.00",
     "category": "coffee",
@@ -71,6 +73,7 @@
 
   {
     "name": "Honey raf",
+    "image": "src/img/coffee_menu/coffee_3.jpeg",
     "description": "Espresso with frothed milk, cream and aromatic honey",
     "price": "5.50",
     "category": "coffee",
@@ -106,6 +109,7 @@
 
   {
     "name": "Ice cappuccino",
+    "image": "src/img/coffee_menu/coffee_4.jpeg",
     "description": "Cappuccino with soft thick foam in summer version with ice",
     "price": "5.00",
     "category": "coffee",
@@ -141,6 +145,7 @@
 
   {
     "name": "Espresso",
+    "image": "src/img/coffee_menu/coffee_5.jpeg",
     "description": "Classic black coffee",
     "price": "4.50",
     "category": "coffee",
@@ -176,6 +181,7 @@
 
   {
     "name": "Latte",
+    "image": "src/img/coffee_menu/coffee_6.jpeg",
     "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
     "price": "5.50",
     "category": "coffee",
@@ -211,6 +217,7 @@
 
   {
     "name": "Latte macchiato",
+    "image": "src/img/coffee_menu/coffee_7.jpeg",
     "description": "Espresso with frothed milk and chocolate",
     "price": "5.50",
     "category": "coffee",
@@ -246,6 +253,7 @@
 
   {
     "name": "Coffee with cognac",
+    "image": "src/img/coffee_menu/coffee_8.jpeg",
     "description": "Fragrant black coffee with cognac and whipped cream",
     "price": "6.50",
     "category": "coffee",
@@ -281,6 +289,7 @@
 
   {
     "name": "Moroccan",
+    "image": "src/img/tea_menu/tea_1.jpeg",
     "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
     "price": "4.50",
     "category": "tea",
@@ -316,6 +325,7 @@
 
   {
     "name": "Ginger",
+    "image": "src/img/tea_menu/tea_2.jpeg",
     "description": "Original black tea with fresh ginger, lemon and honey",
     "price": "5.00",
     "category": "tea",
@@ -351,6 +361,7 @@
 
   {
     "name": "Cranberry",
+    "image": "src/img/tea_menu/tea_3.jpeg",
     "description": "Invigorating black tea with cranberry and honey",
     "price": "5.00",
     "category": "tea",
@@ -386,6 +397,7 @@
 
   {
     "name": "Sea buckthorn",
+    "image": "src/img/tea_menu/tea_4.jpeg",
     "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
     "price": "5.50",
     "category": "tea",
@@ -421,6 +433,7 @@
 
   {
     "name": "Marble cheesecake",
+    "image": "src/img/dessert_menu/dessert_1.png",
     "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
     "price": "3.50",
     "category": "dessert",
@@ -456,6 +469,7 @@
 
   {
     "name": "Red velvet",
+    "image": "src/img/dessert_menu/dessert_2.jpeg",
     "description": "Layer cake with cream cheese frosting",
     "price": "4.00",
     "category": "dessert",
@@ -491,6 +505,7 @@
 
   {
     "name": "Cheesecakes",
+    "image": "src/img/dessert_menu/dessert_3.jpeg",
     "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
     "price": "4.50",
     "category": "dessert",
@@ -526,6 +541,7 @@
 
   {
     "name": "Creme brulee",
+    "image": "src/img/dessert_menu/dessert_4.jpeg",
     "description": "Delicate creamy dessert in a caramel basket with wild berries",
     "price": "4.00",
     "category": "dessert",
@@ -561,6 +577,7 @@
 
   {
     "name": "Pancakes",
+    "image": "src/img/dessert_menu/dessert_5.jpeg",
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
     "price": "4.50",
     "category": "dessert",
@@ -596,6 +613,7 @@
 
   {
     "name": "Honey cake",
+    "image": "src/img/dessert_menu/dessert_6.jpeg",
     "description": "Classic honey cake with delicate custard",
     "price": "4.50",
     "category": "dessert",
@@ -631,6 +649,7 @@
 
   {
     "name": "Chocolate cake",
+    "image": "src/img/dessert_menu/dessert_7.jpeg",
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
     "price": "5.50",
     "category": "dessert",
@@ -666,6 +685,7 @@
 
   {
     "name": "Black forest",
+    "image": "src/img/dessert_menu/dessert_8.jpeg",
     "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
     "price": "6.50",
     "category": "dessert",
