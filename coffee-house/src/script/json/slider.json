@@ -1,0 +1,20 @@
+[
+    {
+        "name":"S'mores Frappuccino",
+        "image":"src/img/beverage_slider/slider_1.png",
+        "description":"This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.",
+        "price":"5.50"
+    },
+    {
+        "name":"Caramel Macchiato",
+        "image":"src/img/beverage_slider/slider_2.png",
+        "description":"Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam..",
+        "price":"5.00"
+    },
+    {
+        "name":"Ice coffee",
+        "image":"src/img/beverage_slider/slider_3.png",
+        "description":"A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.",
+        "price":"4.50"
+    }
+]

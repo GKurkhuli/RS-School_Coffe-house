@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body data-html-file="home">
         <header>
             <div class="nav-bar">
                 <div class="nav-bar__logo"><a href="home.html"><svg width="100" height="60" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,27 +73,17 @@
                     <div class="roulette__menu__object">
                         <button class="button-circle roulette__menu__object-button" id="button_previous"><ion-icon class="center" name="arrow-back-outline"></ion-icon></button>
                         <div class="roulette__menu__object__item">
-                            <div class="roulette__menu__object__item__content">
-                                <div class="roulette__menu__object__item__content__image"><img src="src/img/Ice_coffee.png" alt="Ice coffee"></div>
-                                <div class="roulette__menu__object__item__content__product">
-                                    <p class="roulette__menu__object__item__content__product-header">S’mores Frappuccino</p>
-                                    <p class="roulette__menu__object__item__content__product-description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                                    <p class="roulette__menu__object__item__content__product-price">$5.50</p>
-                                </div>
+                            <div class="roulette__menu__object__item__view">
+                                <!--JS generates innerHTML-->
                             </div>
                         </div>
                         <button class="button-circle roulette__menu__object-button" id="button_next"><ion-icon class="center" name="arrow-forward-outline"></ion-icon></button>
                     </div>
                     
-                    <div class="roulette__menu__radio">
-                        <input type="radio" name="roulette__menu__radio-type" id = "Beer" value="Beer" checked="checked">
-                        <label for="Beer"></label>
-
-                        <input type="radio" name="roulette__menu__radio-type" id = "Juise" value="Juise">
-                        <label for="Juise"></label>
-
-                        <input type="radio" name="roulette__menu__radio-type" id = "Tea" value="Tea">  
-                        <label for="Tea"></label>         
+                    <div class="roulette__menu__options">
+                        <span class="roulette__menu__options__option"></span>
+                        <span class="roulette__menu__options__option"></span>
+                        <span class="roulette__menu__options__option"></span>        
                     </div>
                 </div>
             </div>

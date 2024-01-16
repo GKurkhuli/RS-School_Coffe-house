@@ -5,6 +5,7 @@
     --Color_Brown: #B0907A;
     --Color_Dark-border:#665F55;
     --Color_light-border:#C1B6AD;
+    --Background-Backdrop: #444444;
 }
 @mixin centerVertical {
     position: absolute;
@@ -323,64 +324,70 @@ main{width: 100%;}
             gap: 2.5rem;
             &__item{
                 flex-grow:1;
-                &__content{
+                &__view{
                     margin: 0 auto;
                     max-width: 30rem;
-                    display: flex;
-                    flex-direction: column;
-                    gap:1.25rem; 
-                    &__image{
+                    position: relative;
+                   overflow: hidden;
+                    &__content{
+                        position: absolute;
                         width: 100%;
-                        height: 0;
-                        padding-bottom: 100%;
-                        position: relative;
-                        & img{
-                            height: 100%;
-                            @include center();
+                        display: flex;
+                        flex-direction: column;
+                        gap:1.25rem;
+                        transition: all 250ms linear; 
+
+                        &__image{
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 100%;
+                            position: relative;
+                            & img{
+                                height: 100%;
+                                @include center();
+                            }
+                        }
+        
+                        &__product{
+                            color: var(--Color_Dark);
+                            text-align: center;
+                            &-header{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                line-height: 125%;
+                                margin-bottom: 1rem;
+                            }            
+                            &-description{
+                                font-weight: 400;
+                                line-height: 150%;
+                                margin-bottom: 1rem;
+                            }  
+                            &-price{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                line-height: 125%;
+                            }      
                         }
                     }
-    
-                    &__product{
-                        color: var(--Color_Dark);
-                        text-align: center;
-                        &-header{
-                            font-size: 1.5rem;
-                            font-weight: 600;
-                            line-height: 125%;
-                            margin-bottom: 1rem;
-                        }            
-                        &-description{
-                            font-weight: 400;
-                            line-height: 150%;
-                            margin-bottom: 1rem;
-                        }  
-                        &-price{
-                            font-size: 1.5rem;
-                            font-weight: 600;
-                            line-height: 125%;
-                        }      
-                    }
+                    
+                }
                 }
                 
-            }
         }
-        &__radio{
+        &__options{
             width: 100%;
             display: flex;
             justify-content: center;
             gap: 12px;
-            & label{
+            &__option{
                 width: 40px;
                 height: 4px;
                 border-radius: 100px;
                 background-color: var(--Color_light-border);
-            }
-            & input{display: none;}
-            
-            & input:checked + label{
-                background-color: var(--Color_Dark-border);
-            }
-            
+                &__current{
+                    background-color: var(--Color_Dark-border);
+                }
+            }            
         }
         
     }    
@@ -548,7 +555,25 @@ footer{
         }
     }
 }
+.modal_backDrop{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--Background-Backdrop);
+    opacity: 0.0;
+    z-index: -1;
+    transition: all 250ms linear;
+    transition-delay: 100ms;
 
+    &_show{
+        z-index: 2;
+        opacity: 0.8;
+        transition: all 250ms linear;
+    }
+}
 .menu{
     width: 100%;
     margin-bottom: 6.25rem;
@@ -609,20 +634,17 @@ footer{
         }
     }
     &__items{
-       // margin-bottom: 2.5rem;
-       /* display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(310px,1fr));
-        justify-items:center; */
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 2.5rem;
+        
         &__item{
             position: relative;
             border: 1px solid var(--Color_light-border);
             border-radius: 40px;
             width: 310px;
-            height: 31.625rem;
+
             cursor: pointer;
             &-img{
                 width: 100%;
@@ -671,22 +693,32 @@ footer{
             }
         }
         &__modal{
-            border: none;
             position: fixed;
-            transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%) scale(0);
             left: 50%;
             top: 50%;
             display: flex;
             gap: 1.25rem;
             width: 50rem;
             padding: 1rem;
+            border: none;
             border-radius: 2.5rem;
             background-color: var(--Color_Main);
             color: var(--Color_Dark);
-
-            dialog::backdrop{
+            z-index: -2;
+            opacity: 0;
+            transition: all 250ms linear;
+            
+            &__show{
+                z-index: 3;
+                opacity: 1;
+                transition: all 250ms linear;
+                transition-delay: 100ms;
+                transform: translateX(-50%) translateY(-50%) scale(1);
+            }
+            &::backdrop{
                 background: var(--Color_Dark-border);
-                opacity: 0.5;
+                opacity: 0.6;
             }
 
             &-img{
@@ -910,6 +942,7 @@ footer{
         
         &__refresh{ display: flex;}
     }
+    .modal_backDrop{display: none !important;}
     .contacts{
         padding: 6.25rem 3.75rem;
         flex-direction: column;
@@ -1014,11 +1047,11 @@ footer{
 @media (hover:hover){
     .nav-bar{
         &__navigation{
-            & a:hover::after{
+            & ul a:hover::after{
                 width: 100%;
                 transition: all 250ms linear;           
             }
-            & a::after{
+            & ul a::after{
                 content: '';
                 display: block;
                 width: 0;
@@ -1063,6 +1096,17 @@ footer{
         }
     }
     .menu{
+        &__offer{
+            & label:hover{
+                background-color: var(--Color_Dark-border);
+                color: var(--Color_white);
+                border-color: var(--Color_Dark-border);
+                & span{
+                    background-color: var(--Color_Main);
+                    color: var(--Color_Dark);
+                }
+            }
+        }
         &__items{
             &__item{
                 &:hover img{
@@ -1072,6 +1116,19 @@ footer{
             }
             &__modal{
                 &-description{
+                    &__details{
+                        &-list{
+                            & label:hover{
+                                background-color: var(--Color_Dark-border);
+                                color: var(--Color_white);
+                                border-color: var(--Color_Dark-border);
+                                & span{
+                                    background-color: var(--Color_Main);
+                                    color: var(--Color_Dark);
+                                }
+                            }
+                        }
+                    }
                     &__button{
                         &:hover{
                             background-color: var(--Color_Dark-border);
